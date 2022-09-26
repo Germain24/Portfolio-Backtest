@@ -6,3 +6,6 @@ Pour cela, nous passerons pas différentes étapes :
 2. Explication de sa méthode pour choisir les actions.
 3. Récupération de données financières sous python.
 4. Création d'un score Warren Buffet.
+
+
+C’est le `code`.
