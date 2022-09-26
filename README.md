@@ -1,2 +1,2 @@
 # Warren-Buffet-s-strategy
-Choose your language :
+Choose your language
