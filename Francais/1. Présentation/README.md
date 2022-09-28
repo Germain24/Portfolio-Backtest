@@ -1,9 +1,4 @@
-# La stratégie de Warren Buffett
+# La stratégie de Warren Buffett - Présentation
 
-Le but de ce Github serra l'analyse et la réplication de la stratégie de Warren Buffet pour investir en bourse.
-Pour cela, nous passerons pas différentes étapes :
-1. Présentation de Warren Buffet et de ses résultats en bourse.
-2. Explication de sa méthode pour choisir les actions.
-3. Récupération de données financières sous python et création d'une base données.
-4. Création d'un score Warren Buffet.
+![Warren Buffet](https://www.fundraisers.fr/sites/default/files/public/img/article/warren-buffet-2.jpg)
 
