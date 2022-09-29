@@ -31,4 +31,16 @@ Un grand nombre des opérations soi-disant déconseillées qu'il a réalisées d
 Et les rapports de presse suggèrent que les bénéfices de Berkshire Hathaway rebondissent au milieu du ralentissement économique 
 actuel provoqué par la pandémie mondiale.
 
+À 90 ans, Buffett mène toujours des campagnes - par exemple, il s'est prononcé contre l'élimination de l'impôt sur les successions et 
+contre la publication de prévisions de bénéfices trimestriels. À propos de cette dernière, il a déclaré qu'elle encourageait une
+concentration malsaine sur les bénéfices à court terme au détriment des performances à long terme. "Une communication
+claire des objectifs stratégiques d'une entreprise - ainsi que des mesures qui peuvent être évaluées dans le temps - sera
+toujours essentielle pour les actionnaires. Mais cette information ... doit être fournie selon un calendrier jugé approprié
+aux besoins de chaque entreprise et de ses investisseurs, qu'il soit annuel ou non", ont écrit Jamie Dimon et lui dans le Wall Street Journal.
+
+Oui, les périodes de volatilité appellent des réponses rapides et une action rapide. Mais comme l'a montré Warren Buffett,
+il y a également des avantages significatifs à garder le long terme à l'esprit. Plus précisément, la cohérence, la prudence,
+la patience et le fait de faire confiance aux mathématiques - dans les bons comme dans les mauvais moments - sont des atouts.
+
+
 [Suite](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais/2.%20M%C3%A9thode)
