@@ -15,4 +15,4 @@ A contrario, Warren Buffet ne fait presque aucune décision réactionnaire, il p
 
 Voici les résultats impressionant de son fond d'investissement comparé au S&P 500
 
-![Performance](	https://www.mckinsey.com/~/media/mckinsey/business…t%20an%20appreciation/svgz-buffett-ex1-final.svgz)
+![Performance](https://i.insider.com/56d0b3726e97c623048ba08c?width=1136&format=jpeg)
