@@ -7,3 +7,4 @@ Pour cela, nous passerons pas différentes étapes :
 3. Récupération de données financières sous python et création d'une base données.
 4. Création d'un score Warren Buffet.
 
+[Suite](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais/1.%20Pr%C3%A9sentation)

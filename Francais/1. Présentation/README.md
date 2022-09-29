@@ -18,3 +18,5 @@ Voici les résultats impressionant de son fond d'investissement comparé au S&P 
 ![Performance](https://i.insider.com/56d0b3726e97c623048ba08c?width=1136&format=jpeg)
 
 Warren a réussi à faire 800 fois mieux que le S&P 500 durant la même période.
+
+[Suite](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais/2.%20M%C3%A9thode)
