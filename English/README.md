@@ -1,10 +1,10 @@
-# La stratégie de Warren Buffett
+# Warren Buffett's Strategy
 
-Le but de ce Github serra l'analyse et la réplication de la stratégie de Warren Buffet pour investir en bourse.
-Pour cela, nous passerons pas différentes étapes :
-1. Présentation de Warren Buffet et de ses résultats en bourse.
-2. Explication de sa méthode pour choisir les actions.
-3. Récupération de données financières sous python et création d'une base données.
-4. Création d'un score Warren Buffet.
+The purpose of this Github will be the analysis and replication of Warren Buffet's strategy for investing in the stock market.
+For this, we will go through different steps:
+1. Presentation of Warren Buffet and his stock market results.
+2. Explanation of his method for choosing stocks.
+3. Recovery of financial data under python and creation of a database.
+4. Creation of a Warren Buffett score.
 
-[Suite](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais/1.%20Pr%C3%A9sentation)
+[Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/1.%20Presentation)

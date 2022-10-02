@@ -43,4 +43,4 @@ il y a également des avantages significatifs à garder le long terme à l'espri
 la patience et le fait de faire confiance aux mathématiques dans les bons comme dans les mauvais moments sont des atouts.
 
 
-[Suite](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais/2.%20M%C3%A9thode)
+[Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/2.%20Method)
