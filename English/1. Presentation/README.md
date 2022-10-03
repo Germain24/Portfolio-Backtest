@@ -1,46 +1,46 @@
-# La stratégie de Warren Buffett
-## Présentation
+# Warren Buffett's strategy
+## Presentation
 
 ![Warren Buffet](https://www.fundraisers.fr/sites/default/files/public/img/article/warren-buffet-2.jpg)
 
-Warren Buffet vient d'avoir 92 ans, c'est l’un des chefs d’entreprise les plus influents et riches d’Amérique.
-Nous allons étudier sa logique, sa discipline et compréhension du milieu de l'investissement.
+Warren Buffet has just turned 92 years old and is one of the most influential and wealthy business leaders in America.
+We will study his logic, discipline and understanding of the investment business.
 
 ### Consistance et patience
 
-Nous avons vécu durant cette dernière année, une très forte volatilité sur les marchés financiers.
-De nombreuses personnes paniquent et dévient de leur stratégie d'investissement.
-Le légendaire investisseur et fondateur et PDG de Berkshire Hathaway a gagné des millions de dollars pour les investisseurs sur plusieurs décennies
-A contrario, Warren Buffet ne fait presque aucune décision réactionnaire, il préfère se concentrer sur sa méthode d'investissement.
+During the last year, we have experienced a very high volatility on the financial markets.
+Many people are panicking and deviating from their investment strategy.
+The legendary investor and founder and CEO of Berkshire Hathaway has made millions of dollars for investors over several decades
+In contrast, Warren Buffet makes almost no reactionary decisions, preferring to focus on his investment method.
 
-Voici les résultats impressionant de son fond d'investissement comparé au S&P 500
+Here are the impressive results of his investment fund compared to the S&P 500
 
 ![Performance](https://i.insider.com/56d0b3726e97c623048ba08c?width=1136&format=jpeg)
 
-Warren a réussi à faire 800 fois mieux que le S&P 500 durant la même période.
+Warren managed to do 800 times better than the S&P 500 during the same period.
 
-Buffett a appris son métier auprès de Benjamin Graham , professeur à l'Université de Columbia et économiste britannique.
-C'est peut-être pour cette raison que Buffett n'investit généralement pas dans des opportunités pour lesquelles il ne peut raisonnablement 
-estimer la valeur future, il n'y a pas de sociétés de résaux sociaux, par exemple, ou d'entreprises de crypto-monnaie dans son portefeuille. 
-Au lieu de cela, il mise sur des entreprises qui ont des flux de trésorerie stables et généreront des rendements élevés et un faible risque.
-Depuis que Buffett a acheté See's Candy Shops en 1972, l'entreprise a généré un retour sur investissement de plus de 160 % par an,
-et non en raison de changements importants dans les opérations, la clientèle cible ou la gamme de produits. 
-L’entreprise n’a pas cessé de faire ce qu’elle faisait bien juste pour pouvoir se développer plus rapidement.
+Buffett learned his trade from Benjamin Graham , a Columbia University professor and British economist.
+Perhaps for this reason, Buffett generally does not invest in opportunities for which he cannot reasonably estimate future value. 
+estimate future value-there are no social networking companies, for example, or crypto-currency companies in his portfolio. 
+Instead, he bets on companies that have stable cash flows and will generate high returns and low risk.
+Since Buffett bought See's Candy Shops in 1972, the company has generated a return on investment of more than 160 percent per year,
+and not because of any significant changes in operations, target customer base or product line. 
+The company didn't stop doing what it was doing well just so it could grow faster.
 
-Un grand nombre des opérations soi-disant déconseillées qu'il a réalisées dans le sillage de la crise de 2008 se sont avérées payantes à long terme.
-Et les rapports de presse suggèrent que les bénéfices de Berkshire Hathaway rebondissent au milieu du ralentissement économique 
-actuel provoqué par la pandémie mondiale.
+Many of the supposedly ill-advised deals it made in the wake of the 2008 crisis have paid off in the long run.
+And news reports suggest that Berkshire Hathaway's earnings are rebounding amid the current economic downturn 
+caused by the global pandemic.
 
-À 90 ans, Buffett mène toujours des campagnes par exemple, il s'est prononcé contre l'élimination de l'impôt sur les successions et 
-contre la publication de prévisions de bénéfices trimestriels. À propos de cette dernière, il a déclaré qu'elle encourageait une
-concentration malsaine sur les bénéfices à court terme au détriment des performances à long terme. "Une communication
-claire des objectifs stratégiques d'une entreprise ainsi que des mesures qui peuvent être évaluées dans le temps sera
-toujours essentielle pour les actionnaires. Mais cette information ... doit être fournie selon un calendrier jugé approprié
-aux besoins de chaque entreprise et de ses investisseurs, qu'il soit annuel ou non", ont écrit Jamie Dimon et lui dans le Wall Street Journal.
+At 90, Buffett is still campaigning, for example, against eliminating the estate tax and 
+against the publication of quarterly earnings forecasts. On the latter, he said it encourages an unhealthy focus on short-term profits.
+unhealthy focus on short-term profits at the expense of long-term performance. "Clear communication
+of a company's strategic objectives and metrics that can be measured over time will always be
+essential for shareholders. But this information ... must be provided on a schedule that is appropriate
+to the needs of each company and its investors, whether annual or otherwise," he and Jamie Dimon wrote in the Wall Street Journal.
 
-Oui, les périodes de volatilité appellent des réponses rapides et une action rapide. Mais comme l'a montré Warren Buffett,
-il y a également des avantages significatifs à garder le long terme à l'esprit. Plus précisément, la cohérence, la prudence,
-la patience et le fait de faire confiance aux mathématiques dans les bons comme dans les mauvais moments sont des atouts.
+Yes, volatile times call for quick responses and quick action. But as Warren Buffett has shown
+there are also significant benefits to keeping the long term in mind. Specifically, consistency, prudence,
+patience, and trusting the math in good times and bad are assets.
 
 
 [Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/2.%20Method)
