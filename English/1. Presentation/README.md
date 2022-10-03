@@ -6,7 +6,7 @@
 Warren Buffet has just turned 92 years old and is one of the most influential and wealthy business leaders in America.
 We will study his logic, discipline and understanding of the investment business.
 
-### Consistance et patience
+### Consistency & Patience
 
 During the last year, we have experienced a very high volatility on the financial markets.
 Many people are panicking and deviating from their investment strategy.
