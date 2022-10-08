@@ -15,7 +15,7 @@ The goal is to create a method to simply have stock recommendations based on War
 
 ## Data sources
 
-All data from this project come from an [API](https://site.financialmodelingprep.com/)
+All data from this project come from an [API](https://site.financialmodelingprep.com/).
 
 
 [Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/1.%20Presentation)

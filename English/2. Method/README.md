@@ -1,6 +1,25 @@
-# La stratégie de Warren Buffett
-## Méthode
+# Warren Buffett's strategy
+## Method
 
-Nous allons maintenant voir comment Warren buffet choisit les actions dans lequels il investit.
+We will now see how Warren Buffett chooses the stocks in which he invests.
+
+### Exclusion of certain sectors
+
+Warren buffett n'investit pas dans les secteurs tels que les services financiers, l'énergie ou l'immobilier
+
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
+###
 
 [Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/3.%20Database)
