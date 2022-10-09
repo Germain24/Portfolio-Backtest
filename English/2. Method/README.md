@@ -5,7 +5,7 @@ We will now see how Warren Buffett chooses the stocks in which he invests.
 
 ### Exclusion of certain sectors
 
-Warren buffett n'investit pas dans les secteurs tels que les services financiers, l'énergie ou l'immobilier
+Warren buffett does not invest in sectors such as financial services, energy or real estate
 
 ###
 ###
