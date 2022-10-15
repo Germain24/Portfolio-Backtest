@@ -29,7 +29,11 @@ We want research and development expenses to be under 30% of the revenu minus th
 ### Liabilities
 We want the liabilities to represent less than 50% of assets.
 
-###
+### Return on investment
+We want to see an ROI behond 12%
+To calculte ROI, we use 
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
 ###
 ###
 ###
