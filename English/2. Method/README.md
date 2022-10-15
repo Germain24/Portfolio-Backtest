@@ -23,8 +23,12 @@ We want to see a positive evolution of the stockholders equity throughout the ye
 
 We want to see a positive evolution of the retained earnings throughout the years.
 
-###
-###
+### Research and development expenses
+We want research and development expenses to be under 30% of the revenu minus the cost of revenue.
+
+### Liabilities
+We want the liabilities to represent less than 50% of assets.
+
 ###
 ###
 ###
