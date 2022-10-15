@@ -19,8 +19,9 @@ We want to see a positive evolution of the stockholders equity throughout the ye
 1. We want the cash and cash equivalent to be over 0$ each years.
 2. We want to see a positive growth throughout the years.
 
-###
+### Retained earnings
 
+We want to see a positive evolution of the retained earnings throughout the years.
 
 ###
 ###
