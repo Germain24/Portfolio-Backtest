@@ -34,7 +34,15 @@ We need 5 links :
 | https://<i></i>financialmodelingprep.com/api/v3/balance-sheet-statement/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12&limit=120 | Total liabilities - Total assets - Cash and cash equivalents - Retained earnings - Total stockholders equity - Common stock | Balance Sheet Statement |
 | https://<i></i>financialmodelingprep.com/api/v3/income-statement/{**Ticker**}?limit=120&apikey=ce82b6a14287d6b24fdcaf5468401b12 | Research and development expenses - Operating expenses                                                                      | Income statement        |
 
-
+We need this function to extract data from the API :
 
 ````python
+from urllib.request import urlopen
+import certifi
+import json
+
+def get_jsonparsed_data(url):
+    response = urlopen(url, cafile=certifi.where())
+    data = response.read().decode("utf-8")
+    return json.loads(data)
 ````
