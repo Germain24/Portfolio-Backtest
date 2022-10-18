@@ -49,8 +49,21 @@ def get_jsonparsed_data(url):
 
 I'm going to give you somme exemple :
 
+get_jsonparsed_data function give us a list, each element give us data from most recent one to oldest ones ( [0] for the last and [-1] for the oldest )
+
+### Exemple 1 Apple global information
+
+Code :
+
 ````python
+
 print(get_jsonparsed_data(f"https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=ce82b6a14287d6b24fdcaf5468401b12")[0])
+
+````
+
+Output :
+
+````python
 
 {'symbol': 'AAPL', 'price': 142.41, 'beta': 1.249815, 'volAvg': 81088200, 'mktCap': 2288642686976
    , 'lastDiv': 0.9, 'range': '129.04-182.94', 'changes': 4.029999, 'companyName': 'Apple Inc.', 'currency': 'USD'
@@ -63,5 +76,3 @@ print(get_jsonparsed_data(f"https://financialmodelingprep.com/api/v3/profile/AAP
    , 'isActivelyTrading': True, 'isAdr': False, 'isFund': False}
 
 ````
-
-give us a lot of information about Apple in a dict :
