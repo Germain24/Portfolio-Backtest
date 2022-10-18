@@ -29,7 +29,7 @@ We need 5 links :
 
 | Link         | Utility                 |
 |--------------|-------------------------|
-| https://<i></i>financialmodelingprep.com/api/v3/profile/{ **Ticker** }?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Country - Sector - Name |
+| https://<i></i>financialmodelingprep.com/api/v3/profile/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Country - Sector - Name |
 | Content Cell | Content Cell            |
 
 
