@@ -27,13 +27,12 @@ We need 3 types of elements :
 For this we are going to take financialmodelingprep.com API.
 We need 5 links :
 
-| Link         | Utility                                | Give us  |
-|--------------|----------------------------------------|----------|
-| https://<i></i>financialmodelingprep.com/api/v3/profile/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Country - Sector - Name                | Global data information |
-| https://<i></i>financialmodelingprep.com/api/v3/income-statement/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Revenue - Cost of revenue - Net income | Income Statement |
-| https://<i></i>financialmodelingprep.com/api/v3/profile/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Country - Sector - Name                |          |
-| https://<i></i>financialmodelingprep.com/api/v3/profile/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Country - Sector - Name                |          |
-| https://<i></i>financialmodelingprep.com/api/v3/profile/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12 | Country - Sector - Name                |          |
+| Link                                                                                                                            | Utility                                                                                                                     | Give us                 |
+|---------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| https://<i></i>financialmodelingprep.com/api/v3/profile/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12                    | Country - Sector - Name                                                                                                     | Global data information |
+| https://<i></i>financialmodelingprep.com/api/v3/income-statement/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12           | Revenue - Cost of revenue - Net income                                                                                      | Income Statement        |
+| https://<i></i>financialmodelingprep.com/api/v3/balance-sheet-statement/{**Ticker**}?apikey=ce82b6a14287d6b24fdcaf5468401b12&limit=120 | Total liabilities - Total assets - Cash and cash equivalents - Retained earnings - Total stockholders equity - Common stock | Balance Sheet Statement |
+| https://<i></i>financialmodelingprep.com/api/v3/income-statement/{**Ticker**}?limit=120&apikey=ce82b6a14287d6b24fdcaf5468401b12 | Research and development expenses - Operating expenses                                                                      | Income statement        |
 
 
 
