@@ -26,6 +26,8 @@ We need 3 types of elements :
 
 For this we are going to take financialmodelingprep.com API.
 We need 5 links :
-````
-1. https://financialmodelingprep.com/api/v3/ratios-ttm/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12
+
+1. https://financialmodelingprep.com/api/v3/profile/{ **Ticker** }?apikey=ce82b6a14287d6b24fdcaf5468401b12 for 
+2. 
+````python
 ````
