@@ -3019,14 +3019,150 @@ Output :
 
 ### Creation of the database
 
-Now we want to create a csv file with all the data :
+We are going to create the database :
 
-#### Create a csv file
+#### The dict
+
+We want to create a dict with all the data, each element start with his name :
+
+Code :
 
 ````python
 
-database = open("database.csv","a+")
+databaseWB = {}
+
+single = ["Ticker","Sector","Country","Name of company"]
+annual = ["Revenue","Cost of revenue","Net income","Total liabilities","Total assets","Cash and cash equivalents"
+   ,"Research and development expenses","Retained earnings","Operating expenses","Total stockholders equity","Common stock number"]
+
+for i in single:
+    databaseWB[i]=[i]
+
+for i in annual:
+   for i2 in range(10):
+      databaseWB[i+f" n-{i2}"]=[i+f" n-{i2}"]
 
 ````
 
-It's going to create a csv file named "databaseWB" if it isn't created.
+Output :
+
+````python
+
+{'Ticker': ['Ticker'],
+ 'Sector': ['Sector'],
+ 'Country': ['Country'],
+ 'Name of company': ['Name of company'],
+ 'Revenue n-0': ['Revenue n-0'],
+ 'Revenue n-1': ['Revenue n-1'],
+ 'Revenue n-2': ['Revenue n-2'],
+ 'Revenue n-3': ['Revenue n-3'],
+ 'Revenue n-4': ['Revenue n-4'],
+ 'Revenue n-5': ['Revenue n-5'],
+ 'Revenue n-6': ['Revenue n-6'],
+ 'Revenue n-7': ['Revenue n-7'],
+ 'Revenue n-8': ['Revenue n-8'],
+ 'Revenue n-9': ['Revenue n-9'],
+ 'Cost of revenue n-0': ['Cost of revenue n-0'],
+ 'Cost of revenue n-1': ['Cost of revenue n-1'],
+ 'Cost of revenue n-2': ['Cost of revenue n-2'],
+ 'Cost of revenue n-3': ['Cost of revenue n-3'],
+ 'Cost of revenue n-4': ['Cost of revenue n-4'],
+ 'Cost of revenue n-5': ['Cost of revenue n-5'],
+ 'Cost of revenue n-6': ['Cost of revenue n-6'],
+ 'Cost of revenue n-7': ['Cost of revenue n-7'],
+ 'Cost of revenue n-8': ['Cost of revenue n-8'],
+ 'Cost of revenue n-9': ['Cost of revenue n-9'],
+ 'Net income n-0': ['Net income n-0'],
+ 'Net income n-1': ['Net income n-1'],
+ 'Net income n-2': ['Net income n-2'],
+ 'Net income n-3': ['Net income n-3'],
+ 'Net income n-4': ['Net income n-4'],
+ 'Net income n-5': ['Net income n-5'],
+ 'Net income n-6': ['Net income n-6'],
+ 'Net income n-7': ['Net income n-7'],
+ 'Net income n-8': ['Net income n-8'],
+ 'Net income n-9': ['Net income n-9'],
+ 'Total liabilities n-0': ['Total liabilities n-0'],
+ 'Total liabilities n-1': ['Total liabilities n-1'],
+ 'Total liabilities n-2': ['Total liabilities n-2'],
+ 'Total liabilities n-3': ['Total liabilities n-3'],
+ 'Total liabilities n-4': ['Total liabilities n-4'],
+ 'Total liabilities n-5': ['Total liabilities n-5'],
+ 'Total liabilities n-6': ['Total liabilities n-6'],
+ 'Total liabilities n-7': ['Total liabilities n-7'],
+ 'Total liabilities n-8': ['Total liabilities n-8'],
+ 'Total liabilities n-9': ['Total liabilities n-9'],
+ 'Total assets n-0': ['Total assets n-0'],
+ 'Total assets n-1': ['Total assets n-1'],
+ 'Total assets n-2': ['Total assets n-2'],
+ 'Total assets n-3': ['Total assets n-3'],
+ 'Total assets n-4': ['Total assets n-4'],
+ 'Total assets n-5': ['Total assets n-5'],
+ 'Total assets n-6': ['Total assets n-6'],
+ 'Total assets n-7': ['Total assets n-7'],
+ 'Total assets n-8': ['Total assets n-8'],
+ 'Total assets n-9': ['Total assets n-9'],
+ 'Cash and cash equivalents n-0': ['Cash and cash equivalents n-0'],
+ 'Cash and cash equivalents n-1': ['Cash and cash equivalents n-1'],
+ 'Cash and cash equivalents n-2': ['Cash and cash equivalents n-2'],
+ 'Cash and cash equivalents n-3': ['Cash and cash equivalents n-3'],
+ 'Cash and cash equivalents n-4': ['Cash and cash equivalents n-4'],
+ 'Cash and cash equivalents n-5': ['Cash and cash equivalents n-5'],
+ 'Cash and cash equivalents n-6': ['Cash and cash equivalents n-6'],
+ 'Cash and cash equivalents n-7': ['Cash and cash equivalents n-7'],
+ 'Cash and cash equivalents n-8': ['Cash and cash equivalents n-8'],
+ 'Cash and cash equivalents n-9': ['Cash and cash equivalents n-9'],
+ 'Research and development expenses n-0': ['Research and development expenses n-0'],
+ 'Research and development expenses n-1': ['Research and development expenses n-1'],
+ 'Research and development expenses n-2': ['Research and development expenses n-2'],
+ 'Research and development expenses n-3': ['Research and development expenses n-3'],
+ 'Research and development expenses n-4': ['Research and development expenses n-4'],
+ 'Research and development expenses n-5': ['Research and development expenses n-5'],
+ 'Research and development expenses n-6': ['Research and development expenses n-6'],
+ 'Research and development expenses n-7': ['Research and development expenses n-7'],
+ 'Research and development expenses n-8': ['Research and development expenses n-8'],
+ 'Research and development expenses n-9': ['Research and development expenses n-9'],
+ 'Retained earnings n-0': ['Retained earnings n-0'],
+ 'Retained earnings n-1': ['Retained earnings n-1'],
+ 'Retained earnings n-2': ['Retained earnings n-2'],
+ 'Retained earnings n-3': ['Retained earnings n-3'],
+ 'Retained earnings n-4': ['Retained earnings n-4'],
+ 'Retained earnings n-5': ['Retained earnings n-5'],
+ 'Retained earnings n-6': ['Retained earnings n-6'],
+ 'Retained earnings n-7': ['Retained earnings n-7'],
+ 'Retained earnings n-8': ['Retained earnings n-8'],
+ 'Retained earnings n-9': ['Retained earnings n-9'],
+ 'Operating expenses n-0': ['Operating expenses n-0'],
+ 'Operating expenses n-1': ['Operating expenses n-1'],
+ 'Operating expenses n-2': ['Operating expenses n-2'],
+ 'Operating expenses n-3': ['Operating expenses n-3'],
+ 'Operating expenses n-4': ['Operating expenses n-4'],
+ 'Operating expenses n-5': ['Operating expenses n-5'],
+ 'Operating expenses n-6': ['Operating expenses n-6'],
+ 'Operating expenses n-7': ['Operating expenses n-7'],
+ 'Operating expenses n-8': ['Operating expenses n-8'],
+ 'Operating expenses n-9': ['Operating expenses n-9'],
+ 'Total stockholders equity n-0': ['Total stockholders equity n-0'],
+ 'Total stockholders equity n-1': ['Total stockholders equity n-1'],
+ 'Total stockholders equity n-2': ['Total stockholders equity n-2'],
+ 'Total stockholders equity n-3': ['Total stockholders equity n-3'],
+ 'Total stockholders equity n-4': ['Total stockholders equity n-4'],
+ 'Total stockholders equity n-5': ['Total stockholders equity n-5'],
+ 'Total stockholders equity n-6': ['Total stockholders equity n-6'],
+ 'Total stockholders equity n-7': ['Total stockholders equity n-7'],
+ 'Total stockholders equity n-8': ['Total stockholders equity n-8'],
+ 'Total stockholders equity n-9': ['Total stockholders equity n-9'],
+ 'Common stock number n-0': ['Common stock number n-0'],
+ 'Common stock number n-1': ['Common stock number n-1'],
+ 'Common stock number n-2': ['Common stock number n-2'],
+ 'Common stock number n-3': ['Common stock number n-3'],
+ 'Common stock number n-4': ['Common stock number n-4'],
+ 'Common stock number n-5': ['Common stock number n-5'],
+ 'Common stock number n-6': ['Common stock number n-6'],
+ 'Common stock number n-7': ['Common stock number n-7'],
+ 'Common stock number n-8': ['Common stock number n-8'],
+ 'Common stock number n-9': ['Common stock number n-9']}
+
+````
+
+Now that we have a dict proper set, we need to fill it with our data.
