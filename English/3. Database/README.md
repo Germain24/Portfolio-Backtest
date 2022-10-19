@@ -3174,7 +3174,7 @@ Tickers = ["AAPL","GOOG"]
 
 def AddElement(Database,LinkNumber,Name,Item,Year=0):
         try:
-            Database[Name].append(LinkNumber[Year][Item].capitalize())
+            Database[Name].append(LinkNumber[Year][Item])
         except:
             Database[Name].append("")
             
@@ -3197,6 +3197,11 @@ for i in Tickers:
   AddElement(databaseWB,link1,"Sector","sector")
   AddElement(databaseWB,link1,"Country","country")
   AddElement(databaseWB,link1,"Name of company","companyName")
+  
+  for i2 in range(10):
+     AddElement(databaseWB,link2,f'Revenue n-{i2}',"revenue",i2)
+     AddElement(databaseWB,link2,f'Cost of revenue n-{i2}',"costOfRevenue",i2)
+     AddElement(databaseWB,link2,f'Net income n-{i2}',"netIncome",i2)
 
 
 ````
