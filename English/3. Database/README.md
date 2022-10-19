@@ -3166,3 +3166,18 @@ Output :
 ````
 
 Now that we have a dict proper set, we need to fill it with our data.
+
+````python
+
+Tickers = ["AAPL","GOOG"]
+
+for i in Tickers:
+   try:
+      link1 = dict(get_jsonparsed_data(f"https://financialmodelingprep.com/api/v3/profile/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12"))
+      link2 = dict(get_jsonparsed_data(f"https://financialmodelingprep.com/api/v3/income-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12"))
+      link3 = dict(get_jsonparsed_data(f"https://financialmodelingprep.com/api/v3/balance-sheet-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12&limit=120"))
+      link4 = dict(get_jsonparsed_data(f"https://financialmodelingprep.com/api/v3/income-statement/{i}?limit=120&apikey=ce82b6a14287d6b24fdcaf5468401b12"))
+   except:
+      pass
+
+````
