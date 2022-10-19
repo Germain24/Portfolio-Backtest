@@ -1,7 +1,7 @@
 # La stratégie de Warren Buffett
 ## Database
 
-Now that we know how Warren Buffet chooses his stocks, we are going to create a program that takes financial elements from all stock from an API.
+Now that we know how Warren Buffett chooses his stocks, we are going to create a program that takes financial elements from all stock from an API.
 For the database, we are going to take care of the data of the last 10 years of each stock.
 
 We need 3 types of elements :
@@ -3016,3 +3016,17 @@ Output :
   'link': '',
   'finalLink': ''}]
 ````
+
+### Creation of the database
+
+Now we want to create a csv file with all the data :
+
+#### Create a csv file
+
+````python
+
+database = open("database.csv","a+")
+
+````
+
+It's going to create a csv file named "databaseWB" if it isn't created.
