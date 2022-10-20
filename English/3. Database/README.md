@@ -3170,7 +3170,7 @@ Now that we have a dict proper set, we need to fill it with our data.
 
 ````python
 
-Tickers = ["AAPL","GOOG"]
+Tickers = get_jsonparsed_data("https://financialmodelingprep.com/api/v3/financial-statement-symbol-lists?apikey=ce82b6a14287d6b24fdcaf5468401b12")
 
 def AddElement(Database,LinkNumber,Name,Item,Year=0):
         try:
@@ -3208,6 +3208,13 @@ for i in Tickers:
      AddElement(databaseWB,link3,f'Retained earnings n-{i2}',"retainedEarnings",i2)
      AddElement(databaseWB,link3,f'Total stockholders equity n-{i2}',"totalStockholdersEquity",i2)
      AddElement(databaseWB,link3,f'Common stock number n-{i2}',"commonStock",i2)
+     AddElement(databaseWB,link4,f'Research and development expenses n-{i2}',"researchAndDevelopmentExpenses",i2)
+     AddElement(databaseWB,link4,f'Operating expenses n-{i2}',"operatingExpenses",i2)
+
+  df = pd.DataFrame(databaseWB)
+  df.to_csv('DatabaseWB.csv', index=False, header=False)
 
 
 ````
+
+Maintenant, nous avons une base de données avec toutes les données nécessaires à l'analyse de l'ensemble des actions.
