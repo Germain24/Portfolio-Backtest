@@ -3202,6 +3202,12 @@ for i in Tickers:
      AddElement(databaseWB,link2,f'Revenue n-{i2}',"revenue",i2)
      AddElement(databaseWB,link2,f'Cost of revenue n-{i2}',"costOfRevenue",i2)
      AddElement(databaseWB,link2,f'Net income n-{i2}',"netIncome",i2)
+     AddElement(databaseWB,link3,f'Total liabilities n-{i2}',"totalLiabilities",i2)
+     AddElement(databaseWB,link3,f'Total assets n-{i2}',"totalAssets",i2)
+     AddElement(databaseWB,link3,f'Cash and cash equivalents n-{i2}',"cashAndCashEquivalents",i2)
+     AddElement(databaseWB,link3,f'Retained earnings n-{i2}',"retainedEarnings",i2)
+     AddElement(databaseWB,link3,f'Total stockholders equity n-{i2}',"totalStockholdersEquity",i2)
+     AddElement(databaseWB,link3,f'Common stock number n-{i2}',"commonStock",i2)
 
 
 ````
