@@ -3284,44 +3284,41 @@ def AddElement(Database, LinkNumber, Name, Item, Year=0):
     return (Database)
 
 
-Done = pd.read_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', error_bad_lines=False, encoding='unicode_escape')["Ticker"]
-
 for i in Tickers:
-    if i not in Done:
-        databaseWB["Ticker"].append(i)
+    databaseWB["Ticker"].append(i)
 
-        try:
-            link1 = get_jsonparsed_data(
-                f"https://financialmodelingprep.com/api/v3/profile/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12")
-            link2 = get_jsonparsed_data(
-                f"https://financialmodelingprep.com/api/v3/income-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12")
-            link3 = get_jsonparsed_data(
-                f"https://financialmodelingprep.com/api/v3/balance-sheet-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12&limit=120")
-            link4 = get_jsonparsed_data(
-                f"https://financialmodelingprep.com/api/v3/income-statement/{i}?limit=120&apikey=ce82b6a14287d6b24fdcaf5468401b12")
-        except:
-            link1 = ""
-            link2 = ""
-            link3 = ""
-            link4 = ""
+    try:
+        link1 = get_jsonparsed_data(
+            f"https://financialmodelingprep.com/api/v3/profile/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12")
+        link2 = get_jsonparsed_data(
+            f"https://financialmodelingprep.com/api/v3/income-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12")
+        link3 = get_jsonparsed_data(
+            f"https://financialmodelingprep.com/api/v3/balance-sheet-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12&limit=120")
+        link4 = get_jsonparsed_data(
+            f"https://financialmodelingprep.com/api/v3/income-statement/{i}?limit=120&apikey=ce82b6a14287d6b24fdcaf5468401b12")
+    except:
+        link1 = ""
+        link2 = ""
+        link3 = ""
+        link4 = ""
 
-        AddElement(databaseWB, link1, "Sector", "sector")
-        AddElement(databaseWB, link1, "Country", "country")
-        AddElement(databaseWB, link1, "Name of company", "companyName")
+    AddElement(databaseWB, link1, "Sector", "sector")
+    AddElement(databaseWB, link1, "Country", "country")
+    AddElement(databaseWB, link1, "Name of company", "companyName")
 
-        for i2 in range(10):
-            AddElement(databaseWB, link2, f'Revenue n-{i2}', "revenue", i2)
-            AddElement(databaseWB, link2, f'Cost of revenue n-{i2}', "costOfRevenue", i2)
-            AddElement(databaseWB, link2, f'Net income n-{i2}', "netIncome", i2)
-            AddElement(databaseWB, link3, f'Total liabilities n-{i2}', "totalLiabilities", i2)
-            AddElement(databaseWB, link3, f'Total assets n-{i2}', "totalAssets", i2)
-            AddElement(databaseWB, link3, f'Cash and cash equivalents n-{i2}', "cashAndCashEquivalents", i2)
-            AddElement(databaseWB, link3, f'Retained earnings n-{i2}', "retainedEarnings", i2)
-            AddElement(databaseWB, link3, f'Total stockholders equity n-{i2}', "totalStockholdersEquity", i2)
-            AddElement(databaseWB, link3, f'Common stock number n-{i2}', "commonStock", i2)
-            AddElement(databaseWB, link4, f'Research and development expenses n-{i2}', "researchAndDevelopmentExpenses", i2)
-            AddElement(databaseWB, link4, f'Operating expenses n-{i2}', "operatingExpenses", i2)
+    for i2 in range(10):
+        AddElement(databaseWB, link2, f'Revenue n-{i2}', "revenue", i2)
+        AddElement(databaseWB, link2, f'Cost of revenue n-{i2}', "costOfRevenue", i2)
+        AddElement(databaseWB, link2, f'Net income n-{i2}', "netIncome", i2)
+        AddElement(databaseWB, link3, f'Total liabilities n-{i2}', "totalLiabilities", i2)
+        AddElement(databaseWB, link3, f'Total assets n-{i2}', "totalAssets", i2)
+        AddElement(databaseWB, link3, f'Cash and cash equivalents n-{i2}', "cashAndCashEquivalents", i2)
+        AddElement(databaseWB, link3, f'Retained earnings n-{i2}', "retainedEarnings", i2)
+        AddElement(databaseWB, link3, f'Total stockholders equity n-{i2}', "totalStockholdersEquity", i2)
+        AddElement(databaseWB, link3, f'Common stock number n-{i2}', "commonStock", i2)
+        AddElement(databaseWB, link4, f'Research and development expenses n-{i2}', "researchAndDevelopmentExpenses", i2)
+        AddElement(databaseWB, link4, f'Operating expenses n-{i2}', "operatingExpenses", i2)
 
-        df = pd.DataFrame(databaseWB)
-        df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', index=False, header=False)
+    df = pd.DataFrame(databaseWB)
+    df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', index=False, header=False)
 ````
