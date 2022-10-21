@@ -3217,9 +3217,9 @@ for i in Tickers:
 
 ````
 
-Maintenant, nous avons une base de données avec toutes les données nécessaires à l'analyse de l'ensemble des actions.
+Now we have a database with all the data needed to analyze all the actions.
 
-Voici ce que nous obtenons :
+Output :
 
 
 | Ticker    | Sector             | Country | Name of company                                 | Revenue n-0   | Revenue n-1    | Revenue n-2    | Revenue n-3    | Revenue n-4    | Revenue n-5   | Revenue n-6    | Revenue n-7    | Revenue n-8   | Revenue n-9   | Cost of revenue n-0 | Cost of revenue n-1 | Cost of revenue n-2 | Cost of revenue n-3 | Cost of revenue n-4 | Cost of revenue n-5 | Cost of revenue n-6 | Cost of revenue n-7 | Cost of revenue n-8 | Cost of revenue n-9 | Net income n-0 | Net income n-1 | Net income n-2 | Net income n-3 | Net income n-4 | Net income n-5 | Net income n-6 | Net income n-7 | Net income n-8 | Net income n-9 | Total liabilities n-0 | Total liabilities n-1 | Total liabilities n-2 | Total liabilities n-3 | Total liabilities n-4 | Total liabilities n-5 | Total liabilities n-6 | Total liabilities n-7 | Total liabilities n-8 | Total liabilities n-9 | Total assets n-0 | Total assets n-1 | Total assets n-2 | Total assets n-3 | Total assets n-4   | Total assets n-5 | Total assets n-6 | Total assets n-7 | Total assets n-8 | Total assets n-9 | Cash and cash equivalents n-0 | Cash and cash equivalents n-1 | Cash and cash equivalents n-2 | Cash and cash equivalents n-3 | Cash and cash equivalents n-4 | Cash and cash equivalents n-5 | Cash and cash equivalents n-6 | Cash and cash equivalents n-7 | Cash and cash equivalents n-8 | Cash and cash equivalents n-9 | Research and development expenses n-0 | Research and development expenses n-1 | Research and development expenses n-2 | Research and development expenses n-3 | Research and development expenses n-4 | Research and development expenses n-5 | Research and development expenses n-6 | Research and development expenses n-7 | Research and development expenses n-8 | Research and development expenses n-9 | Retained earnings n-0 | Retained earnings n-1 | Retained earnings n-2 | Retained earnings n-3 | Retained earnings n-4 | Retained earnings n-5 | Retained earnings n-6 | Retained earnings n-7 | Retained earnings n-8 | Retained earnings n-9 | Operating expenses n-0 | Operating expenses n-1 | Operating expenses n-2 | Operating expenses n-3 | Operating expenses n-4 | Operating expenses n-5 | Operating expenses n-6 | Operating expenses n-7 | Operating expenses n-8 | Operating expenses n-9 | Total stockholders equity n-0 | Total stockholders equity n-1 | Total stockholders equity n-2 | Total stockholders equity n-3 | Total stockholders equity n-4 | Total stockholders equity n-5 | Total stockholders equity n-6 | Total stockholders equity n-7 | Total stockholders equity n-8 | Total stockholders equity n-9 | Common stock number n-0 | Common stock number n-1 | Common stock number n-2 | Common stock number n-3 | Common stock number n-4 | Common stock number n-5 | Common stock number n-6 | Common stock number n-7 | Common stock number n-8 | Common stock number n-9 |
@@ -3236,3 +3236,90 @@ Voici ce que nous obtenons :
 | LVCLY     | Healthcare         | AU      | Living Cell Technologies Limited                | 0.0           | 0.0            | 3168.0         | 9769.0         | 121403.0       | 115279.0      | 120091.0       | 611955.0       | 7394130.0     | 7580000.0     | 0.0                 | 0.0                 | 0.0                 | 0.0                 | 0.0                 | 0.0                 | 109987.0            | 581575.0            | 6775486.0           | 7067000.0           | -1957300.0     | -1460591.0     | -968469.0      | -3181363.0     | -374492.0      | -4090257.0     | -3093163.0     | -7043402.0     | -6778896.0     | -2979000.0     | 239256.0              | 265081.0              | 512723.0              | 1621130.0             | 473470.0              | 1176020.0             | 635798.0              | 337652.0              | 1233027.0             | 966000.0              | 4274080.0        | 1642197.0        | 3391077.0        | 5759621.0        | 7608793.0          | 8694360.0        | 6312458.0        | 5464515.0        | 9664604.0        | 14218000         | 4238857.0                     | 1568928.0                     | 2964874.0                     | 4907957.0                     | 6861663.0                     | 7530033.0                     | 5301999.0                     | 5144027.0                     | 4554399.0                     | 4504000.0                     | 1463134.0                             | 1609230.0                             | 2383801.0                             | 3328905.0                             | 3502378.0                             | 4441754.0                             | 2364452.0                             | 1774381.0                             | 487356.0                              | 396000.0                              | -78743956             | -76786656             | -75326065             | -74357596             | -71176233             | -70801741             | -66711484             | -63618321             | -56574919             | -50099000             | 2376796.0              | 2283621.0              | 3165968.0              | 4172092.0              | 4392088.0              | 5367717.0              | 4046306.0              | 3320008.0              | 2201077.0              | 1665000.0              | 4034824.0                     | 1377116.0                     | 2878354.0                     | 4138491.0                     | 7135323.0                     | 7518340.0                     | 5676660.0                     | 5126863.0                     | 8431577.0                     | 13252000                      | 78949518                | 74371070                | 74371070                | 74371070                | 74371070                | 74339770                | 68406383                | 64751709                | 60685600                | 60686000                |
 | CPAH      |                    |         |                                                 | 10764904      | 12381741       | 10685590       | 11081358       | 12003083       | 11681948      | 15239923       | 14083496       | 11040298      | 8016857.0     | 2223984.0           | 1629814.0           | 1723371.0           | 1667087.0           | 2222071.0           | 2231222.0           | 2276777.0           | 2818569.0           | 2864838.0           | 2933749.0           | -5013439.0     | -3220670.0     | -2458515.0     | -2691595.0     | -4441867.0     | -5914547.0     | 472280.0       | -2123361.0     | -3542331.0     | -5461586.0     | 7898889.0             | 5093041.0             | 4053837.0             | 3861647.0             | 4304006.0             | 4056932.0             | 4128268.0             | 6005084.0             | 4854460.0             | 3552700.0             | 11124786         | 13334227         | 11233146         | 12966131         | 14223164           | 19136890         | 25055877         | 21543944         | 15210969         | 16195374         | 1862458.0                     | 2348883.0                     | 2071019.0                     | 2159738.0                     | 2852422.0                     | 7172798.0                     | 11229595                      | 8154139.0                     | 1707397.0                     | 1556813.0                     | 5547587.0                             | 5506887.0                             | 4843813.0                             | 4737055.0                             | 5669217.0                             | 5508516.0                             | 5503928.0                             | 4782908.0                             | 4469979.0                             | 3586425.0                             | -68581091             | -63701685             | -60481015             | -58022500             | -55330905             | -50889038             | -44974491             | -45446771             | -43323410             | -39779781             | 13707681               | 13545697               | 11915836               | 12256080               | 15126932               | 14654526               | 14419434               | 12684758               | 11962593               | 10339848               | 3225897.0                     | 8241186.0                     | 7179309.0                     | 9104484.0                     | 9919158.0                     | 15079958                      | 20927609                      | 15538860                      | 10356509                      | 12642674                      | 5950.0                  | 5931.0                  | 5005.0                  | 4542.0                  | 42334.0                 | 42600.0                 | 41959.0                 | 39961.0                 | 33440.0                 | 33016.0                 |
 | JGLE.JK   | Consumer Cyclical  | ID      | PT Graha Andrasentra Propertindo Tbk.           | 86780000000   | 88207000000    | 284464051745   | 288471478784   | 330824301711   | 355161572861  | 366434131789   | 367523242799   | 380888165808  |               | 73872000000         | 72825000000         | 125738225092        | 131408282106        | 160219148709        | 199125524045        | 195263318016        | 150033846094        | 157794112267        |                     | -101490000000  | -111292000000  | -111006367263  | -16146971095   | 8545675637     | -57064676357   | -254777485858  | 998435036029   | -825466241671  |                | 1102345000000         | 1273853000000         | 1246751281356         | 1571384618699         | 1641420801533         | 1706873349873         | 2385580910940         |                       |                       |                       | 3050135000000    | 3320852000000    | 3408062565639    | 3843887118265    | 3927687833256      | 4000486142377    | 4317713156967    |                  |                  |                  | 64016000000                   | 11122000000                   | 15513177279                   | 19797579925                   | 17683436980                   | 13990565036                   | 14667387501                   |                               |                               |                               | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   |                                       | 57601000000           | 159091000000          | 272844355160          | 383850722423          | 399997693518          | 391452017881          | 448516694238          |                       |                       |                       | 69274000000            | 81325000000            | 147799644725           | 106083302590           | 126912509476           | 184921686530           | 268905572412           | 258854335124           | 242902688876           |                        | 1947739000000                 | 2047027000000                 | 2161331385523                 | 2272520255527                 | 2286284453539                 | 2293627899694                 | 1932141963189                 |                               |                               |                               | 2258191000000           | 2258191000000           | 2258190940500           | 2258190940500           | 2258190940500           | 2258190940500           | 1928190940500           |                         |                         |                         |
+
+It's the final programm :
+
+````python
+import time
+import csv
+from urllib.request import urlopen
+import certifi
+import json
+import pandas as pd
+from datetime import datetime
+
+
+def get_jsonparsed_data(url):
+    response = urlopen(url, cafile=certifi.where())
+    data = response.read().decode("utf-8")
+    return json.loads(data)
+
+
+databaseWB = {}
+
+single = ["Ticker", "Sector", "Country", "Name of company"]
+annual = ["Revenue", "Cost of revenue", "Net income", "Total liabilities", "Total assets", "Cash and cash equivalents"
+    , "Research and development expenses", "Retained earnings", "Operating expenses", "Total stockholders equity",
+          "Common stock number"]
+
+for i in single:
+    databaseWB[i] = [i]
+
+for i in annual:
+    for i2 in range(10):
+        databaseWB[i + f" n-{i2}"] = [i + f" n-{i2}"]
+
+Tickers = get_jsonparsed_data(
+    "https://financialmodelingprep.com/api/v3/financial-statement-symbol-lists?apikey=ce82b6a14287d6b24fdcaf5468401b12")
+
+
+def AddElement(Database, LinkNumber, Name, Item, Year=0):
+    try:
+        Database[Name].append(LinkNumber[Year][Item])
+    except:
+        Database[Name].append("")
+
+    return (Database)
+
+
+Done = pd.read_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', error_bad_lines=False, encoding='unicode_escape')["Ticker"]
+
+for i in Tickers:
+    if i not in Done:
+        databaseWB["Ticker"].append(i)
+
+        try:
+            link1 = get_jsonparsed_data(
+                f"https://financialmodelingprep.com/api/v3/profile/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12")
+            link2 = get_jsonparsed_data(
+                f"https://financialmodelingprep.com/api/v3/income-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12")
+            link3 = get_jsonparsed_data(
+                f"https://financialmodelingprep.com/api/v3/balance-sheet-statement/{i}?apikey=ce82b6a14287d6b24fdcaf5468401b12&limit=120")
+            link4 = get_jsonparsed_data(
+                f"https://financialmodelingprep.com/api/v3/income-statement/{i}?limit=120&apikey=ce82b6a14287d6b24fdcaf5468401b12")
+        except:
+            link1 = ""
+            link2 = ""
+            link3 = ""
+            link4 = ""
+
+        AddElement(databaseWB, link1, "Sector", "sector")
+        AddElement(databaseWB, link1, "Country", "country")
+        AddElement(databaseWB, link1, "Name of company", "companyName")
+
+        for i2 in range(10):
+            AddElement(databaseWB, link2, f'Revenue n-{i2}', "revenue", i2)
+            AddElement(databaseWB, link2, f'Cost of revenue n-{i2}', "costOfRevenue", i2)
+            AddElement(databaseWB, link2, f'Net income n-{i2}', "netIncome", i2)
+            AddElement(databaseWB, link3, f'Total liabilities n-{i2}', "totalLiabilities", i2)
+            AddElement(databaseWB, link3, f'Total assets n-{i2}', "totalAssets", i2)
+            AddElement(databaseWB, link3, f'Cash and cash equivalents n-{i2}', "cashAndCashEquivalents", i2)
+            AddElement(databaseWB, link3, f'Retained earnings n-{i2}', "retainedEarnings", i2)
+            AddElement(databaseWB, link3, f'Total stockholders equity n-{i2}', "totalStockholdersEquity", i2)
+            AddElement(databaseWB, link3, f'Common stock number n-{i2}', "commonStock", i2)
+            AddElement(databaseWB, link4, f'Research and development expenses n-{i2}', "researchAndDevelopmentExpenses", i2)
+            AddElement(databaseWB, link4, f'Operating expenses n-{i2}', "operatingExpenses", i2)
+
+        df = pd.DataFrame(databaseWB)
+        df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', index=False, header=False)
+````
