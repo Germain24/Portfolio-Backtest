@@ -35,7 +35,7 @@ We want to see a gross margin over 40%.
 Gross Margin = (Total Revenue - Cost of Goods Sold)/Total Revenue.
 
 ### Net margin
-We want to see a net margin over 10% for EU country and over 20% for others.
+We want to see a net margin over 20%.
 Net Margin = Net Income / Total Revenue
 
 ### Revenue
