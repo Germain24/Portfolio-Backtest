@@ -1,5 +1,5 @@
 # Warren-Buffet-s-strategy
 Choose your language
 
-[Francais](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais)
-[English](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English)
+1. [Francais](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais)
+2. [English](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English)
