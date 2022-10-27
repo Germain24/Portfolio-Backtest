@@ -3323,4 +3323,4 @@ for i in Tickers:
     df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', index=False, header=False)
 ````
 
-[Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/Francais/4.%20Score%20WB)
+[Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/4.%20Score%20WB)
