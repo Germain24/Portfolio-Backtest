@@ -1,4 +1,4 @@
-# La stratégie de Warren Buffett
+# Warren Buffett's Strategy
 ## Database
 
 Now that we know how Warren Buffett chooses his stocks, we are going to create a program that takes financial elements from all stock from an API.

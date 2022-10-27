@@ -1,4 +1,4 @@
-# La stratégie de Warren Buffett
+# Warren Buffett's Strategy
 ## Database
 
 ### Using our database
