@@ -43,4 +43,4 @@ We want to see a positive evolution of the revenue throughout the years.
 
 Now we are going to see how to evaluate each of these elements with a Python's script.
 
-[Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/3.%20Database)
+[Next](https://github.com/Germain24/Warren-Buffet-s-strategy/tree/main/English/4.%20Score%20WB)
