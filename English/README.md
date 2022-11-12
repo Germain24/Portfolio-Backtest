@@ -33,7 +33,7 @@ In contrast, Warren Buffet makes almost no reactionary decisions, preferring to 
 
 Here are the impressive results of his investment fund compared to the S&P 500
 
-![Performance](https://i.insider.com/56d0b3726e97c623048ba08c?width=1136&format=jpeg)
+<img alt="Performance" height="388" src="https://i.insider.com/56d0b3726e97c623048ba08c?width=1136&amp;format=jpeg" width="690"/>
 
 Warren managed to do 800 times better than the S&P 500 during the same period.
 
