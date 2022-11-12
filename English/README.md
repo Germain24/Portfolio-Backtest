@@ -2274,7 +2274,7 @@ Output :
 
 ````
 
-#### Exemple 4 Google Income Statement
+#### Exemple 4 Google Income Statement 
 
 Code :
 
@@ -3346,9 +3346,46 @@ Output :
 | CPAH      |                    |         |                                                 | 10764904      | 12381741       | 10685590       | 11081358       | 12003083       | 11681948      | 15239923       | 14083496       | 11040298      | 8016857.0     | 2223984.0           | 1629814.0           | 1723371.0           | 1667087.0           | 2222071.0           | 2231222.0           | 2276777.0           | 2818569.0           | 2864838.0           | 2933749.0           | -5013439.0     | -3220670.0     | -2458515.0     | -2691595.0     | -4441867.0     | -5914547.0     | 472280.0       | -2123361.0     | -3542331.0     | -5461586.0     | 7898889.0             | 5093041.0             | 4053837.0             | 3861647.0             | 4304006.0             | 4056932.0             | 4128268.0             | 6005084.0             | 4854460.0             | 3552700.0             | 11124786         | 13334227         | 11233146         | 12966131         | 14223164           | 19136890         | 25055877         | 21543944         | 15210969         | 16195374         | 1862458.0                     | 2348883.0                     | 2071019.0                     | 2159738.0                     | 2852422.0                     | 7172798.0                     | 11229595                      | 8154139.0                     | 1707397.0                     | 1556813.0                     | 5547587.0                             | 5506887.0                             | 4843813.0                             | 4737055.0                             | 5669217.0                             | 5508516.0                             | 5503928.0                             | 4782908.0                             | 4469979.0                             | 3586425.0                             | -68581091             | -63701685             | -60481015             | -58022500             | -55330905             | -50889038             | -44974491             | -45446771             | -43323410             | -39779781             | 13707681               | 13545697               | 11915836               | 12256080               | 15126932               | 14654526               | 14419434               | 12684758               | 11962593               | 10339848               | 3225897.0                     | 8241186.0                     | 7179309.0                     | 9104484.0                     | 9919158.0                     | 15079958                      | 20927609                      | 15538860                      | 10356509                      | 12642674                      | 5950.0                  | 5931.0                  | 5005.0                  | 4542.0                  | 42334.0                 | 42600.0                 | 41959.0                 | 39961.0                 | 33440.0                 | 33016.0                 |
 | JGLE.JK   | Consumer Cyclical  | ID      | PT Graha Andrasentra Propertindo Tbk.           | 86780000000   | 88207000000    | 284464051745   | 288471478784   | 330824301711   | 355161572861  | 366434131789   | 367523242799   | 380888165808  |               | 73872000000         | 72825000000         | 125738225092        | 131408282106        | 160219148709        | 199125524045        | 195263318016        | 150033846094        | 157794112267        |                     | -101490000000  | -111292000000  | -111006367263  | -16146971095   | 8545675637     | -57064676357   | -254777485858  | 998435036029   | -825466241671  |                | 1102345000000         | 1273853000000         | 1246751281356         | 1571384618699         | 1641420801533         | 1706873349873         | 2385580910940         |                       |                       |                       | 3050135000000    | 3320852000000    | 3408062565639    | 3843887118265    | 3927687833256      | 4000486142377    | 4317713156967    |                  |                  |                  | 64016000000                   | 11122000000                   | 15513177279                   | 19797579925                   | 17683436980                   | 13990565036                   | 14667387501                   |                               |                               |                               | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   | 0.0                                   |                                       | 57601000000           | 159091000000          | 272844355160          | 383850722423          | 399997693518          | 391452017881          | 448516694238          |                       |                       |                       | 69274000000            | 81325000000            | 147799644725           | 106083302590           | 126912509476           | 184921686530           | 268905572412           | 258854335124           | 242902688876           |                        | 1947739000000                 | 2047027000000                 | 2161331385523                 | 2272520255527                 | 2286284453539                 | 2293627899694                 | 1932141963189                 |                               |                               |                               | 2258191000000           | 2258191000000           | 2258190940500           | 2258190940500           | 2258190940500           | 2258190940500           | 1928190940500           |                         |                         |                         |
 
+
+
+## Database
+
+### Using our database
+
+Now that our database is created, we are going to import it in a new python file :
+
+````python
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('DatabaseWB_2022-10-20.csv', header=0)
+
+df[f"Score WB"] = [0] * len(df[f"Ner Margin n-{i}"])
+````
+
+We need to create 5 missing elements that Warren Buffet use:
+
+#### Creation of missing variables
+
+````python
+for i in range(10):
+    df[f"ROI n-{i}"] = df[f"Revenue n-{i}"] / (df[f"Total assets n-{i}"] + df[f"Total liabilities n-{i}"])
+    df[f"Gross Margin n-{i}"] = (df[f"Revenue n-{i}"] - df[f"Cost of revenue n-{i}"]) / df[f"Revenue n-{i}"]
+    df[f"Ner Margin n-{i}"] = df[f"Net income n-{i}"] / df[f"Revenue n-{i}"]
+    df[f"Earnings per shares n-{i}"] = df[f"Revenue n-{i}"] / df[f"Common stock number n-{i}"]
+
+df[f"CountryZone"] = [2] * len(df[f"Ner Margin n-{i}"])
+
+for i in ["Fr", "De", "At", "Be", "Bg", "Cy", "Hr", "Dk", "Es", "Ee", "Fi", "Gr", "Hu", "Ie", "It","Lv", "Lt", "Lu", "Mt", "Nl", "Gb"]:
+    df[f"CountryZone"] += np.where((df[f"Country"] == i ), 1, 0)
+````
+
+
 ### Final program
 
-It's the final programm :
+#### Create a save the database
+
+It's the finals programms :
 
 ````python
 import time
@@ -3430,36 +3467,4 @@ for i in Tickers:
 
     df = pd.DataFrame(databaseWB)
     df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', index=False, header=False)
-````
-
-## Database
-
-### Using our database
-
-Now that our database is created, we are going to import it in a new python file :
-
-````python
-import pandas as pd
-import numpy as np
-
-df = pd.read_csv('DatabaseWB_2022-10-20.csv', header=0)
-
-df[f"Score WB"] = [0] * len(df[f"Ner Margin n-{i}"])
-````
-
-We need to create 5 missing elements that Warren Buffet use:
-
-#### Creation of missing variables
-
-````python
-for i in range(10):
-    df[f"ROI n-{i}"] = df[f"Revenue n-{i}"] / (df[f"Total assets n-{i}"] + df[f"Total liabilities n-{i}"])
-    df[f"Gross Margin n-{i}"] = (df[f"Revenue n-{i}"] - df[f"Cost of revenue n-{i}"]) / df[f"Revenue n-{i}"]
-    df[f"Ner Margin n-{i}"] = df[f"Net income n-{i}"] / df[f"Revenue n-{i}"]
-    df[f"Earnings per shares n-{i}"] = df[f"Revenue n-{i}"] / df[f"Common stock number n-{i}"]
-
-df[f"CountryZone"] = [2] * len(df[f"Ner Margin n-{i}"])
-
-for i in ["Fr", "De", "At", "Be", "Bg", "Cy", "Hr", "Dk", "Es", "Ee", "Fi", "Gr", "Hu", "Ie", "It","Lv", "Lt", "Lu", "Mt", "Nl", "Gb"]:
-    df[f"CountryZone"] += np.where((df[f"Country"] == i ), 1, 0)
 ````
