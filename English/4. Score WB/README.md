@@ -1,2 +1,0 @@
-# Warren Buffett's Strategy
-
