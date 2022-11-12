@@ -131,6 +131,9 @@ We need 3 types of elements :
    11. Common stock number
 
 For this we are going to take financialmodelingprep.com API.
+
+### How the API work ?
+
 We need 5 links :
 
 | Link                                                                                                                            | Utility                                                                                                                     | Give us                 |
@@ -157,7 +160,7 @@ I'm going to give you somme exemple :
 
 get_jsonparsed_data function give us a list, each element gives us data from more recent one to oldest ones ( [0] for the last and [-1] for the oldest )
 
-### Exemple 1 Apple global information
+#### Exemple 1 Apple global information
 
 Code :
 
@@ -183,7 +186,7 @@ Output :
 
 ````
 
-### Exemple 2 Microsoft global information
+#### Exemple 2 Microsoft global information
 
 Code :
 
@@ -1606,7 +1609,7 @@ Output :
 
 ````
 
-### Exemple 3 Meta Balance Sheet Statement
+#### Exemple 3 Meta Balance Sheet Statement
 
 Code :
 
