@@ -3380,10 +3380,73 @@ for i in ["Fr", "De", "At", "Be", "Bg", "Cy", "Hr", "Dk", "Es", "Ee", "Fi", "Gr"
     df[f"CountryZone"] += np.where((df[f"Country"] == i ), 1, 0)
 ````
 
+Now that we have created missing variable we need to see if they fit with Warren Buffett demand :
 
-### Final program
+### Element good enough ?
 
-#### Create a save the database
+#### Element
+
+We had a 0.1 point to 'Score WB' if the criteria of Warren Buffett is good enough. We repeat it for each element and each year.
+
+````python
+for i in range(10):
+    df[f"Score WB"] += np.where(df[f"Cash and cash equivalents n-{i}"] > 0, 0.1, 0) \
+                       + np.where(df[f"Research and development expenses n-{i}"] < 0.3 * (df[f"Revenue n-{i}"] - df[f"Cost of revenue n-{i}"]), 0.1, 0) \
+                       + np.where(df[f"Total liabilities n-{i}"] < 0.5*df[f"Total assets n-{i}"], 0.1, 0)\
+                       + np.where(df[f"Total liabilities n-{i}"] < df[f"Total assets n-{i}"] + df[f"Cash and cash equivalents n-{i}"], 0.1, 0)\
+                       + np.where(df[f"ROI n-{i}"] > 0.12, 0.1, 0)\
+                       + np.where(df[f"Gross Margin n-{i}"] > 0.4, 0.1, 0) \
+                       + np.where((df[f"Ner Margin n-{i}"] > 0.1) & (df[f"CountryZone"] == 1), 0.1, 0)\
+                       + np.where((df[f"Ner Margin n-{i}"] > 0.2) & (df[f"CountryZone"] == 2), 0.1, 0)
+````
+
+
+#### Evolution of element
+
+Now we do the same, but with criteria of evolution that's why we only do it 9 times.
+
+````python
+for i in range(9):
+    df[f"Score WB"] += np.where(df[f"Earnings per shares n-{i}"] - df[f"Earnings per shares n-{i+1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Total stockholders equity n-{i}"] - df[f"Total stockholders equity n-{i + 1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Cash and cash equivalents n-{i}"] - df[f"Cash and cash equivalents n-{i + 1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Retained earnings n-{i}"] - df[f"Retained earnings n-{i + 1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Revenue n-{i}"] - df[f"Revenue n-{i + 1}"] > 0, 0.1, 0)
+````
+
+#### Criteria of sector
+
+If the sector is financial services, energy or real estate, we set his score in negatives values.
+
+````python
+for i in ["Financial Services","Real Estate","Energy"]:
+    df[f"Score WB"] += np.where(df[f"Sector"] == i , -20, 0)
+````
+
+### From raw score to clean %
+
+We transform the score to have a percentage of elemental validated.
+
+````python
+df[f"Score WB"] = round(df[f"Score WB"] * 100 / 12,2)
+for i in range(len(df[f"Score WB"])):
+    if float(df[f"Score WB"][i])<0:
+        df[f"Score WB"][i]=0
+````
+
+### Sort and save
+
+Now we only need to finish the modified database by sorting and saving the file.
+
+````python
+df = df.sort_values(by=["Score WB"],ascending=False)
+
+df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}-Modified.csv', index=False, encoding='utf-8')
+````
+
+## Final program
+
+### Create a save the database
 
 It's the finals programms :
 
@@ -3467,4 +3530,57 @@ for i in Tickers:
 
     df = pd.DataFrame(databaseWB)
     df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', index=False, header=False)
+````
+
+### Create and save the modified database
+
+````python
+import pandas as pd
+import numpy as np
+from datetime import datetime
+
+# Read file and set row number(s) to use as the column name(s)
+df = pd.read_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}.csv', header=0)
+df[f"Score WB"] = [0] * len(df[f"Sector"])
+
+for i in range(10):
+    df[f"ROI n-{i}"] = df[f"Revenue n-{i}"] / (df[f"Total assets n-{i}"] + df[f"Total liabilities n-{i}"])
+    df[f"Gross Margin n-{i}"] = (df[f"Revenue n-{i}"] - df[f"Cost of revenue n-{i}"]) / df[f"Revenue n-{i}"]
+    df[f"Ner Margin n-{i}"] = df[f"Net income n-{i}"] / df[f"Revenue n-{i}"]
+    df[f"Earnings per shares n-{i}"] = df[f"Revenue n-{i}"] / df[f"Common stock number n-{i}"]
+
+df[f"CountryZone"] = [2] * len(df[f"Ner Margin n-{i}"])
+
+for i in ["Fr", "De", "At", "Be", "Bg", "Cy", "Hr", "Dk", "Es", "Ee", "Fi", "Gr", "Hu", "Ie", "It","Lv", "Lt", "Lu", "Mt", "Nl", "Gb"]:
+    df[f"CountryZone"] += np.where((df[f"Country"] == i ), 1, 0)
+
+for i in range(10):
+    df[f"Score WB"] += np.where(df[f"Cash and cash equivalents n-{i}"] > 0, 0.1, 0) \
+                       + np.where(df[f"Research and development expenses n-{i}"] < 0.3 * (df[f"Revenue n-{i}"] - df[f"Cost of revenue n-{i}"]), 0.1, 0) \
+                       + np.where(df[f"Total liabilities n-{i}"] < 0.5*df[f"Total assets n-{i}"], 0.1, 0)\
+                       + np.where(df[f"Total liabilities n-{i}"] < df[f"Total assets n-{i}"] + df[f"Cash and cash equivalents n-{i}"], 0.1, 0)\
+                       + np.where(df[f"ROI n-{i}"] > 0.12, 0.1, 0)\
+                       + np.where(df[f"Gross Margin n-{i}"] > 0.4, 0.1, 0) \
+                       + np.where((df[f"Ner Margin n-{i}"] > 0.1) & (df[f"CountryZone"] == 1), 0.1, 0)\
+                       + np.where((df[f"Ner Margin n-{i}"] > 0.2) & (df[f"CountryZone"] == 2), 0.1, 0)
+
+for i in range(9):
+    df[f"Score WB"] += np.where(df[f"Earnings per shares n-{i}"] - df[f"Earnings per shares n-{i+1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Total stockholders equity n-{i}"] - df[f"Total stockholders equity n-{i + 1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Cash and cash equivalents n-{i}"] - df[f"Cash and cash equivalents n-{i + 1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Retained earnings n-{i}"] - df[f"Retained earnings n-{i + 1}"] > 0, 0.1, 0)\
+                       + np.where(df[f"Revenue n-{i}"] - df[f"Revenue n-{i + 1}"] > 0, 0.1, 0)
+
+
+for i in ["Financial Services","Real Estate","Energy"]:
+    df[f"Score WB"] += np.where(df[f"Sector"] == i , -20, 0)
+
+df[f"Score WB"] = round(df[f"Score WB"] * 100 / 12,2)
+for i in range(len(df[f"Score WB"])):
+    if float(df[f"Score WB"][i])<0:
+        df[f"Score WB"][i]=0
+
+df = df.sort_values(by=["Score WB"],ascending=False)
+
+df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}-Modified.csv', index=False, encoding='utf-8')
 ````
