@@ -1,4 +1,4 @@
-# Program Name
+# Warren Buffet's strategy
 This program is a tool for managing and analyzing data.
 
 ## Getting Started
