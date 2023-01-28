@@ -3446,7 +3446,7 @@ df.to_csv(f'DatabaseWB_{datetime.today().strftime("%Y-%m-%d")}-Modified.csv', in
 
 ## Analyse results
 
-We are going to make an portfolio based on our database :
+We are going to make a portfolio based on our database :
 
 
 
