@@ -37,7 +37,7 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
-API_KEY = os.getenv('API_KEY')
+API_KEY = "ce82b6a14287d6b24fdcaf5468401b12"
 tickers = ['AAPL', 'AMZN', 'GOOGL', 'MSFT']
 weights = [0.25, 0.25, 0.25, 0.25]
 
@@ -45,7 +45,7 @@ def get_portfolio_value(start_date, end_date):
     prices = []
     for ticker in tickers:
         url = f'https://financialmodelingprep.com/api/v3/historical-price-full/{ticker}?from={start_date}&to={end_date}&apikey={API_KEY}'
-        data = requests.get(url).json()['historical']
+        data = reversed(requests.get(url).json()['historical'])
         df = pd.DataFrame(data)
         df.set_index('date', inplace=True)
         prices.append(df['close'])
@@ -59,7 +59,7 @@ def plot_portfolio_value(portfolio_value):
     plt.ylabel('Valeur du portefeuille')
     plt.show()
 
-start_date = '2020-01-01'
+start_date = '2012-01-01'
 end_date = '2020-12-31'
 
 portfolio_value = get_portfolio_value(start_date, end_date)
