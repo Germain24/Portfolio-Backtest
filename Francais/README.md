@@ -1,22 +1,81 @@
-# La stratégie de Warren Buffett
-
-## Introduction
-Ce logiciel utilise Python pour imiter les choix d'achat d'actions de Warren Buffett en utilisant des données financières historiques et en utilisant des techniques d'analyse de données pour prédire les tendances du marché.
+# Analyse de portefeuille avec Python
+Ce programme permet d'analyser l'évolution d'un portefeuille d'actions en utilisant l'API de financialmodelingprep.com. Le programme prend en entrée une liste de tickers d'actions et une liste de pourcentages correspondants, et génère un graphique de l'évolution de la valeur du portefeuille sur une période donnée.
 
 ## Prérequis
 Python 3.x
-Les modules pandas, numpy, scikit-learn
-Les données financières historiques (peut être obtenu à partir de sources telles que Yahoo Finance)
-
-## Installation
-Téléchargez ou clonez ce référentiel sur votre ordinateur.
-Ouvrez un terminal et accédez au répertoire où se trouve le fichier "main.py"
-Installez les modules requis en utilisant la commande pip : pip install -r requirements.txt
+Bibliothèques Python : requests, pandas, matplotlib
 
 ## Utilisation
-Lancez le fichier "main.py" en utilisant la commande : python main.py
-Le programme vous demandera de saisir les informations de connexion à la base de données (si nécessaire)
-Une fois les données chargées, le programme utilisera des techniques d'analyse de données pour prédire les tendances du marché et vous donnera les actions à acheter pour imiter les choix de Warren Buffett
+Cloner le dépôt sur votre ordinateur.
 
-## Note
-Ce logiciel est un exemple de simulation de l'investissement comme Warren Buffett et ne doit pas être utilisé pour prendre des décisions d'investissement réelles. Il est important de faire des recherches et de consulter un professionnel avant de prendre toute décision d'investissement.
+Ouvrir un terminal et naviguer vers le dossier du projet.
+
+Installer les bibliothèques Python nécessaires en exécutant la commande suivante :
+
+pip install -r requirements.txt
+
+Renommer le fichier .env.example en .env, puis ajouter votre clé d'API financialmodelingprep.com.
+
+Ouvrir le fichier portfolio_analysis.py dans votre éditeur de code et modifier les listes tickers et weights selon vos besoins.
+
+Exécuter le programme en utilisant la commande suivante :
+
+
+python portfolio_analysis.py
+
+Le programme affichera un graphique de l'évolution du portefeuille sur une période donnée, ainsi que des statistiques sur la performance du portefeuille.
+
+## Auteur
+
+Ce projet a été créé par De Sousa Germain.
+
+## Code
+
+``` python
+import os
+import requests
+import pandas as pd
+import matplotlib.pyplot as plt
+
+API_KEY = os.getenv('API_KEY')
+tickers = ['AAPL', 'AMZN', 'GOOGL', 'MSFT']
+weights = [0.25, 0.25, 0.25, 0.25]
+
+def get_portfolio_value(start_date, end_date):
+    prices = []
+    for ticker in tickers:
+        url = f'https://financialmodelingprep.com/api/v3/historical-price-full/{ticker}?from={start_date}&to={end_date}&apikey={API_KEY}'
+        data = requests.get(url).json()['historical']
+        df = pd.DataFrame(data)
+        df.set_index('date', inplace=True)
+        prices.append(df['close'])
+    portfolio_value = pd.concat(prices, axis=1).dot(weights)
+    return portfolio_value
+
+def plot_portfolio_value(portfolio_value):
+    portfolio_value.plot(figsize=(10, 6))
+    plt.title('Évolution de la valeur du portefeuille')
+    plt.xlabel('Date')
+    plt.ylabel('Valeur du portefeuille')
+    plt.show()
+
+start_date = '2020-01-01'
+end_date = '2020-12-31'
+
+portfolio_value = get_portfolio_value(start_date, end_date)
+plot_portfolio_value(portfolio_value)
+
+print('Performance du portefeuille :')
+print(f'- Rendement annuel : {portfolio_value.pct_change().mean() * 252:.2%}')
+print(f'- Volatilité annuelle : {portfolio_value.pct_change().std() * 252 ** 0.5:.2%}')
+print(f'- Ratio de Sharpe : {portfolio_value.pct_change().mean() / portfolio_value.pct_change().std() * 252 ** 0.5:.2f}')
+print(f'- Maximum Drawdown : {((portfolio_value / portfolio_value.cummax()) - 1).min():.2%}')
+
+```
+
+Cela calcule les statistiques de performance suivantes :
+
+Rendement annuel : le rendement moyen du portefeuille par an.
+Volatilité annuelle : l'écart-type du rendement annuel du portefeuille.
+Ratio de Sharpe : le rendement moyen du portefeuille ajusté au risque (mesuré par la volatilité) par unité de temps (généralement annuel).
+Maximum Drawdown : la plus grande perte subie par le portefeuille depuis son plus haut historique.
