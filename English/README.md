@@ -1,42 +1,29 @@
-# Warren Buffet's strategy
-This program is a tool for managing and analyzing data.
+# Portfolio Backtest
+Portfolio Backtest is a Python program designed to calculate and visualize the performance of a stock portfolio.
 
-## Getting Started
-These instructions will guide you through the process of setting up and running the program on your local machine.
+## Features
+The program offers the following features:
 
-### Prerequisites
-Python 3.x
-Required libraries: pandas, numpy, matplotlib
-### Installation
-Clone the repository to your local machine
-bash
-Copy code
-git clone https://github.com/username/repository
-Install the required libraries by running the following command in the terminal
-Copy code
-pip install -r requirements.txt
-### Usage
-Run the program by executing the following command in the terminal
-css
-Copy code
-python main.py
-Follow the prompts to input the necessary data and select the desired options
-The program will output the results in the terminal and also generate a graph if needed
-## Program Structure
-The program is divided into several modules for better organization and maintainability. Here is a brief explanation of each module:
+- Retrieval of historical data for multiple stocks from the financialmodelingprep.com API 
+- Calculation of each stock's contribution to the portfolio value using a given set of weights 
+- Aggregation of contributions to obtain the total portfolio value over a given period of time 
+- Plotting of the portfolio's performance over the given period of time 
+- Calculation of various performance statistics, such as annual return, annual volatility, Sharpe ratio, and maximum drawdown
 
-main.py: This is the entry point of the program. It contains the main function that handles user input and calls the appropriate functions from the other modules.
-data_manager.py: This module handles the loading, cleaning and preprocessing of the data.
-analyzer.py: This module contains the functions for analyzing the data and generating the results.
-visualizer.py: This module is responsible for creating visualizations of the data and results.
-## Authors
-De Sousa Germain
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+## How to Use
+To use the program, you need to have Python 3.x installed on your system as well as the requests, pandas, numpy, and matplotlib.pyplot libraries. You can install these libraries by running the following command in your terminal:
 
-## Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
-## Note
-The program is designed to work with tabular data in CSV format. Other file formats can be added in the future if needed.
+```python
+pip install requests pandas numpy matplotlib
+```
+
+Then, you can run the program by executing the portfolio_backtest.py file in your terminal with the following command:
+
+```python
+python Portoflio_Backtest.py
+```
+
+You can also customize the program by modifying the stock symbols and weights in the tickers and weights lists, as well as the start and end dates in the start_date and end_date variables.
+
+## Author
+Portfolio Backtest was created by [Germain De Sousa].
