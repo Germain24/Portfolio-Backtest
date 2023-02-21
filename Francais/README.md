@@ -25,5 +25,5 @@ python Portoflio_Backtest.py
 
 Vous pouvez également personnaliser le programme en modifiant les symboles d'actions et les pondérations dans les listes tickers et weights, ainsi que les dates de début et de fin dans les variables start_date et end_date.
 
-Auteur
+## Auteur
 Portoflio Backtest a été créé par [Germain De Sousa].
