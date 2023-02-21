@@ -26,4 +26,4 @@ python Portoflio_Backtest.py
 You can also customize the program by modifying the stock symbols and weights in the tickers and weights lists, as well as the start and end dates in the start_date and end_date variables.
 
 ## Author
-Portfolio Backtest was created by [Germain De Sousa].
+Portfolio Backtest was created by Germain De Sousa.
